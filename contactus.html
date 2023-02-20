@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-16x16.png">
+        <!-- bootstrap css cdn link -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <!-- font awesome cdn link -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <!-- personal css -->
+        <link rel="stylesheet" href="stytle/contactus.css">
+        	<!-- Font Family -->
+	    <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+	    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+		<!-- sweet alert js cdn link -->
+		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+		
+</head>
+<style>
+	.sm-clean a {
+    position: relative;
+}
+.sm-clean a:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 10px;
+    background-color: #333333;
+    transition: width .3s;
+    position: absolute;
+	top: 10px;
+    left: -5%;
+    bottom: 8px;
+    z-index: -1;
+}
+
+.sm-clean a.current:after, 
+.sm-clean a:hover:after, 
+.sm-clean ul a:hover:after {
+    width: 110%;
+}
+</style>
+<body onload="onLoading()">
+
+	<div class="is-mobile"></div>
+    <!-- LOADER -->
+        <div id="loader-wrapper">
+            <div class="loader"></div>
+        </div>
+    <!--end LOADER -->
+    <!-- header section start -->
+	<header class="header px-md-5" id="nav">
+		<div class="logo"><div class="fas fa-bars text-white" id="menu-btnn"></div><a href="index.html"><img width="120" src="img/Logo.png"alt=""></a></div>
+		<div class="links sm sm-clean">
+			<a href="index.html">Home</a>
+			<a href="aboutus.html">About</a>
+			<a href="firstpage.html">Category</a>
+			<a href="shop.html">Shop</a>
+			<a href="gallery.html">Gallery</a>
+			<a href="contactus.html">Contact</a>
+		</div>
+
+		<div class="icons">
+			<a href=""><img src="img/basket.png" alt=""></a>
+			<a href="Signin JS/login.html"><img width="28" src="img/user-icon.png" alt=""></a>
+		</div>
+	</header>
+	<!-- header section ends -->
+
+	<!-- header section Backgroung img -->
+	<section class="wpo-page-title">
+		<div class="container">
+			<div class="row">
+				<div class="wpo-bread-crumb-wrap-1 text-center">
+					<h2 style="font-family: 'Parisienne', cursive">Contact Us</h2>
+					<ul class="wpo-bread-crumb-wrap">
+						<a href="index.html"><li>Home</li></a>
+						<li>Contact</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- header section Backgroung img ends -->
+
+
+	<!-- cards -->
+	  <div class="container mt-5">
+		<div class="row justify-content-center gap-3">
+
+	  <div class="card text-center mb-3 border-0 box-shadow" style="width: 18rem;">
+		<div class="card-body">
+		  <h2 class="card-title pt-5 pb-4 card-title-icons"><i class="fa-solid fa-location-dot"></i></h2>
+		  <h3 class="p-1">Address</h3>
+		  <p class="card-text p-2 pb-4">7 Green Lake Street Crawfordsville, IN 47933</p>
+		</div>
+	  </div>
+	  <div class="card text-center mb-3 border-0 box-shadow" style="width: 18rem;">
+		<div class="card-body">
+		  <h2 class="card-title pt-5 pb-4 card-title-icons"><i class="fa-solid fa-envelope"></i></h2>
+		  <h3 class="p-1">Email Us</h3>
+		  <a href="http://gmail.com" target="_blank"><p class="card-text p-2 pb-4 text-lowercase">
+			humaidshaykh@gmail.com
+			<br>
+			weddingplanner@gmail.com
+		</p></a>
+		</div>
+	  </div>
+	  <div class="card text-center mb-3 border-0 box-shadow" style="width: 18rem;">
+		<div class="card-body">
+		  <h2 class="card-title pt-5 pb-4 card-title-icons"><i class="fa-solid fa-phone"></i></h2>
+		  <h3 class="p-1">Call Now</h3>
+		  <p class="card-text p-2 pb-4">
+			+92 324 340 7525
+			<br>
+			+92 324 340 7525
+		  </p>
+		</div>
+	  </div>
+
+	  </div>
+	</div>
+	<!-- cards -->
+
+	<!-- contact us form-->
+	<h1 class="heading" style="font-family: 'Dancing Script', cursive; font-size: 48px;">Have Any Question?</h1>
+		<p class="paragraph display-in-large">
+			It is a long established fact that a reader will
+			 be distracted <br>content of a page when looking.
+		</p>
+		<p class="paragraph display-in-small">
+			It is a long established fact that a reader will
+			 be <br>distracted content of a page when looking.
+		</p>
+		<!-- contact us form end-->
+
+
+	  
+
+	<!-- contact section start -->
+
+	<div class="container mt-5">
+        <form action="https://formspree.io/f/mlekjjak" method="POST" onsubmit="return validation();" class="contact-form">
+    <div class="row">
+        <div class="col-6 mb-5 child-contact">
+            <input type="text" onfocus="onfocss()" autocomplete="off" name="Name" class="form-control" id="user_name" value="" placeholder="Your Name">
+			<span id="error1" class="text-danger fw-bolder"></span>
+        </div>
+        <div class="col-6 mb-5 child-contact">
+            <input type="text" onfocus="onfocss()" autocomplete="off" name="Email" class="form-control" id="user_email" value="" placeholder="Your Email">
+			<span id="error2" class="text-danger fw-bolder"></span>
+        </div>
+        <div class="col-lg-6 col-md-12 mb-5 child-contact">
+            <input type="text" onfocus="onfocss()" autocomplete="off" name="Phone Number" autocomplete="off" class="form-control" id="user_phone" placeholder="Your Phone">
+			<span id="error3" class="text-danger fw-bolder"></span>
+        </div>
+        <div class="col-lg-6 col-md-12 mb-5 child-contact">
+            <select class="form-select" onfocus="onfocss()" name="Services" id="get_services">
+                <option value="Select Services">Select Services</option>
+                <option value="Photography">Photography</option>
+                <option value="Perfect Cake">Perfect Cake</option>
+                <option value="Wedding Dress">Wedding Dress</option>
+                <option value="Wedding Event">Wedding Event</option>
+                <option value="All Of The Above">All Of The Above</option>
+              </select>
+			  <span id="error4" class="text-danger fw-bolder"></span>
+          </div>
+        <div class="col-12 child-contact">
+            <textarea class="form-control" onfocus="onfocss()" name="Message" id="user_message" rows="3" placeholder="Message"></textarea>
+			<span id="error5" class="text-danger fw-bolder"></span>
+        </div>
+    </div>
+	    <div class="submit-button">
+			<input style="padding: 14px 28px; border-radius: 2px;" class="btnn-appoinment mt-5" type="submit" value="SUBMIT NOW">
+		</div>
+        </form>
+    </div>
+
+	<!-- contact section ends -->
+
+
+
+
+
+
+
+
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387193.3060634231!2d-74.2598746005945!3d40.69714939728215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1675466717444!5m2!1sen!2s" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+		  <!-- Footer -->
+		  <footer>
+			<div class="footer">
+		
+				<img class="justify-content-center text-center m-auto py-3" width="250px" src="img/logo.png" alt="">
+				<div class="row">
+					<div class="col-12 footer-link">
+				<ul>
+					<li><a class="menu__link" href="index.html">Home</a></li>
+					<li><a class="menu__link" href="aboutus.html">About</a></li>
+					<li><a class="menu__link" href="firstpage.html">Category</a></li>
+					<li><a class="menu__link" href="shop.html">Shop</a></li>
+					<li><a class="menu__link" href="gallery.html">Gallery</a></li>
+					<li><a class="menu__link" href="contactus.html">Contact</a></li>
+				</ul>
+				</div>
+			</div>
+		
+			  <div class="row">
+				<div class="col-12">
+				<a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+				<a href="#"><i class="fa-brands fa-instagram"></i></a>
+				<a href="#"><i class="fa-brands fa-youtube"></i></a>
+				<a href="#"><i class="fa-brands fa-twitter"></i></a>
+			</div>
+			  </div>
+		
+			  <div class="row justify-content-center text-center">
+				© Copyright 2023 | Wishiz | All right reserved.
+			  </div>
+			</div>
+		  </footer>
+		  <!-- Footer End-->
+
+
+
+
+
+        <!-- Bottom to top button -->
+        <a href="#" class="to-top">
+            <i class="fa-solid fa-angle-up"></i>
+        </a>
+        <!-- Bottom to top button end -->
+
+
+
+
+
+
+
+		
+		<!-- jquery cdn link -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <!-- personal js link -->
+		<script src="Javascript/contact.js"></script>
+        <!-- bootstrap js cdn link -->
+		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Consultant</title>
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-16x16.png">
+    <!-- bootstrap css cdn link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- font awesome cdn link -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!-- personal css -->
+	<link rel="stylesheet" href="stytle/index.css">
+	<!-- jquery cdn link -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<!-- Boxicons CSS -->
+	<link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet"/>
+	<!-- Font Family -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+</head>
+<style>
+	.sm-clean a {
+    position: relative;
+}
+.sm-clean a:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 10px;
+    background-color: #333333;
+    transition: width .3s;
+    position: absolute;
+	top: 10px;
+    left: -5%;
+    bottom: 8px;
+    z-index: -1;
+}
+
+.sm-clean a.current:after, 
+.sm-clean a:hover:after, 
+.sm-clean ul a:hover:after {
+    width: 110%;
+}
+</style>
+<body onload="onLoading()">
+
+<div class="is-mobile"></div>
+<!-- LOADER -->
+    <div id="loader-wrapper">
+         <div class="loader"></div>
+    </div>
+<!--end LOADER -->
+
+<!-- -----Popup-----  -->
+<div id="popUpMain" style="display: none;">
+	<div id="popup">
+		<h5 id="newsheading">Subscribe our newsletter for daily updates.</h5>
+		<form action="" onsubmit="return subscribe()">
+			<input type="email" autocomplete="off" name="" id="emailid" value="" required placeholder="Enter email address">
+			<br>
+			<span id="suberror" class="text-danger fw-bolder ml-5"></span>
+			<br>
+			<button style="padding: 8px 16px;" class="btnn-appoinment"> Subscribe </button>
+			<button style="padding: 8px 16px;" class="submitId btnn-appoinment"> No Thanks </button>
+		</form>
+			
+	</div>
+</div>
+<!-- -----Loading/Popup End-----  -->
+    	
+	<!-- header section start -->
+	<header class="header px-md-5" id="nav">
+		<div class="logo"><div class="fas fa-bars text-white" id="menu-btnn"></div><a href="index.html"><img width="120" src="img/Logo.png"alt=""></a></div>
+
+		<div class="links sm sm-clean">
+			<a href="index.html">Home</a>
+			<a href="aboutus.html">About</a>
+			<a href="firstpage.html">Category</a>
+			<a href="shop.html">Shop</a>
+			<a href="gallery.html">Gallery</a>
+			<a href="contactus.html">Contact</a>
+		</div>
+
+		<div class="icons">
+			<!-- <a href=""><div class="fa-sharp fa-solid fa-magnifying-glass"></div></a> -->
+			<a title="Your Cart" href=""><img src="img/basket.png" alt=""></a>
+			<a title="Register" href="Signin JS/login.html"><img width="28" src="img/user-icon.png" alt=""></a>
+		</div>
+	</header>
+	<!-- header section ends -->
+
+	<!-- home section start -->
+
+	<section class="home" id="home">
+		<div class="contentt">
+			<h1>WEDDING PLANNING MADE EASY.</h1>
+			<p>Because we’re the best at what we do</p>
+			<a href="gallery.html" class="btnn"><span>Check out our Gallery</span></a>
+		</div>
+	</section>
+	<!-- home section ends -->
+
+
+<!-- our Story & our Mission -->
+<section class="bg0 p-t-75 p-b-120">
+	<div class="container">
+	<div class="row p-b-148">
+	<div class="col-md-7 col-lg-8">
+	<div class="p-t-7 p-r-85 p-r-15-lg p-r-0-md">
+	<h3 class="mtext-111 cl2 p-b-16" style="font-family: 'Dancing Script', cursive;">
+	Our Story
+	</h3>
+	<p class="stext-113 cl6 p-b-26">
+		Our bussiness build in 1980 in Pakistan: a truly global business serving millions of costumers worldwide. A publication of the lovely wedding style brand that helps brides find their perfect dress, Cocomelody’s blog is a beautiful resource for any bride-to-be that is looking for some serious fashion inspiration.The brand’s blog features a lovely mix of wedding planning tips and real-life wedding profiles, as well as detailed information about bridal fashion.	</p>
+	<p class="stext-113 cl6 p-b-26">
+		Every day, everything we do is an expression of our core values: caring, global teamwork, and continuous improvement. As we continue to build a future to smile about, these company values serve as guiding principles for our product development, our business practices, and our relationships among our team members, with our customers, and with people in communities all over the world.	</p>
+	<p class="stext-113 cl6 p-b-26">
+	Any questions? Let us know in store at 8th floor, 379 Hudson St, New York, NY 10018 or call us on (+1) 96 716 6879
+	</p>
+	</div>
+	</div>
+	<div class="col-11 col-md-5 col-lg-4 m-lr-auto">
+	<div class="how-bor1 ">
+	<div class="hov-img0">
+	<img src="img/about-our-story.jpeg" alt="IMG">
+	</div>
+	</div>
+	</div>
+	</div>
+	<div class="row">
+	<div class="order-md-2 col-md-7 col-lg-8 p-b-30">
+	<div class="p-t-7 p-l-85 p-l-15-lg p-l-0-md">
+	<h3 class="mtext-111 cl2 p-b-16" style="font-family: 'Dancing Script', cursive;">
+	Our Mission
+	</h3>
+	<p class="stext-113 cl6 p-b-26">
+		We are committed to getting better every day in everything it does, as individuals and as teams. Our Company will be successful by better understanding consumers’ and customers’ expectations and continuously working to innovate and improve products, services and processes.
+
+With detailed guides to themes, vendors, dress styles, wedding beauty, and more, these wedding specialists will help you plan literally every little detail of your wedding down to your table settings.
+
+Elegant Wedding also hosts an annual Elegant Wedding Bridal Showcase in Montreal — a wonderful destination for any bride (or wedding professional) looking for some serious wedding inspiration.	</p>
+	<div class="bor16 p-l-29 p-b-9 m-t-22">
+	<p class="stext-114 cl6 p-r-40 p-b-11">
+	Creativity is just connecting things. When you ask creative people how they did something, they feel a little guilty because they didn't really do it, they just saw something. It seemed obvious to them after a while.
+	</p>
+	<span class="stext-111 cl8">
+	- Humaid Shaykh
+	</span>
+	</div>
+	</div>
+	</div>
+	<div class="order-md-1 col-11 col-md-5 col-lg-4 m-lr-auto p-b-30">
+	<div class="how-bor2">
+	<div class="hov-img0">
+	<img src="img/about-our-mission.jpeg" alt="IMG">
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</section>
+<!-- our Story & our Mission End-->
+
+
+	<!-- project section start -->
+
+<div class="container-fluid">
+	<section class="project" id="project">
+		<h1 class="heading" style="font-family: 'Dancing Script', cursive;">Our Services</h1>
+		<h1 class="mini-heading">WHAT WE OFFER FOR YOU</h1>
+		<hr class="line-none" style="margin-left: 100px; margin-right: 100px; color: #A08173;">
+
+		<div class="box-container">
+			<div class="box">
+				<img src="img/wed-dress.webp">
+
+				<div class="contentt">
+					<div>
+						<h3 style="font-family: 'Satisfy', cursive;">Wedding Dress</h3>
+					</div>
+				</div>
+			</div>
+
+			<div class="box">
+				<img src="img/event-planning.webp">
+
+				<div class="contentt">
+					<div>
+						<h3 style="font-family: 'Satisfy', cursive;">Event Planning</h3>
+					</div>
+				</div>
+			</div>
+
+			<div class="box">
+				<img src="img/photography.webp">
+
+				<div class="contentt">
+					<div>
+						<h3 style="font-family: 'Satisfy', cursive;">Photography</h3>
+					</div>
+				</div>
+			</div>
+
+			<div class="box">
+				<img src="img/cake-design.webp">
+
+				<div class="contentt">
+					<div>
+						<h3 style="font-family: 'Satisfy', cursive;">Cake Design</h3>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<div class="submit-button">
+			<a href="firstpage.html"><input style="padding: 14px 28px; border-radius: 2px;" class="btnn-appoinment mt-5" type="submit" value="View All Categories"></a>
+		</div>
+	</section>
+</div>
+
+	<!-- project section ends -->
+
+
+	<!-- Total Event Coverage -->
+	<div class="container-fluid section-work-data">
+		<div class="row p-5 g-5 justify-content-center text-center align-items-center">
+			<div class="col-5 col-md-5 col-lg-2 p-2">
+				<h1 id="counting" class="counter-numbers" style="font-family: 'Allura', cursive;" data-number="1360">0+</h1>
+				<h4 id="only-for-colour" style="font-family: 'Allura', cursive;">Happy Couples</h4>
+			</div>
+			<div class="col-2 col-md-2 col-lg-1 p-2"><img class="img-fluid" src="img/flower1.webp" alt=""></div>
+			<div class="col-5 col-md-5 col-lg-2 p-2">
+				<h1 id="counting" class="counter-numbers" style="font-family: 'Allura', cursive;" data-number="503">0+</h1>
+				<h4 id="only-for-colour" style="font-family: 'Allura', cursive;">Decoration</h4>
+			</div>
+
+			<div class="col-md-0 col-lg-1 p-2"><img class="img-fluid" id="for-none-sm" src="img/flower2.webp" alt=""></div>
+
+			<div class="col-5 col-md-5 col-lg-2 p-2">
+				<h1 id="counting" class="counter-numbers" style="font-family: 'Allura', cursive;" data-number="1530">0+</h1>
+				<h4 id="only-for-colour" style="font-family: 'Allura', cursive;">Wedding</h4>
+			</div>
+			<div class="col-2 col-md-2 col-lg-1 p-2"><img class="img-fluid" src="img/flower3.webp" alt=""></div>
+			<div class="col-5 col-md-5 col-lg-2 p-2">
+				<h1 id="counting" class="counter-numbers" style="font-family: 'Allura', cursive;" data-number="306">0+</h1>
+				<h4 id="only-for-colour" style="font-family: 'Allura', cursive;">Location</h4>
+			</div>
+		</div>
+	</div>
+	<!-- Total Event Coverage End-->
+
+	<!-- ------wait-costumer------ -->
+	<section class="wpo-page-title my-5">
+		<div class="container">
+			<div class="row">
+				<div class="wpo-bread-crumb-wrap-1 text-center">
+					<h1 style="font-family: 'Parisienne', cursive">We Are Waiting for Celebrate Your Day</h1>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- ------wait-costumer end------ -->
+
+<!-- team section start -->
+
+<div class="container-fluid">
+	<section class="team pt-5" id="team">
+		<h1 class="heading" style="font-family: 'Dancing Script', cursive;">Our Organizers</h1>
+		<h1 class="mini-heading">AWESOME TEAM MEMBER</h1>
+		<hr class="line-none" style="margin-left: 100px; margin-right: 100px; color: #A08173;">
+
+		<section id="team-1" class="pb-5">
+			<div class="container mb-5">
+				<div class="box-11">
+					<div class="top-bar"></div>
+						<div class="nav-11">
+							<i class="verify fas fa-check-circle"></i>
+							<input type="checkbox" class="heart-btn" id="heart-btn">
+						</div>
+	  
+						<div class="details">
+							<img src="img/author-img-2.png" alt="">
+							<strong>Margarate Bennet</strong>
+							<p>Dress Designer</p>
+						</div>
+	  
+						<div class="bt-n">
+							<a href="#"><i class="fab fa-facebook-f"></i></a>
+							<a href="#"><i class="fab fa-twitter"></i></a>
+							<a href="#"><i class="fab fa-instagram"></i></a>
+							<a href="#"><i class="fab fa-youtube"></i></a>
+						</div>
+					</div>
+				<div class="box-11">
+					<div class="top-bar"></div>
+						<div class="nav-11">
+							<i class="verify fas fa-check-circle"></i>
+							<input type="checkbox" class="heart-btn" id="heart-btn">
+						</div>
+	  
+						<div class="details">
+							<img src="img/author-img-1.png" alt="">
+							<strong>Henry D’suza</strong>
+							<p>Wedding Planner</p>
+						</div>
+	  
+						<div class="bt-n">
+							<a href="#"><i class="fab fa-facebook-f"></i></a>
+							<a href="#"><i class="fab fa-twitter"></i></a>
+							<a href="#"><i class="fab fa-instagram"></i></a>
+							<a href="#"><i class="fab fa-youtube"></i></a>
+						</div>
+					</div>
+				<div class="box-11">
+					<div class="top-bar"></div>
+						<div class="nav-11">
+							<i class="verify fas fa-check-circle"></i>
+							<input type="checkbox" class="heart-btn" id="heart-btn">
+						</div>
+	  
+						<div class="details">
+							<img src="img/author.jpg" alt="">
+							<strong>Jenefer Abram</strong>
+							<p>Assistant</p>
+						</div>
+	  
+						<div class="bt-n">
+							<a href="#"><i class="fab fa-facebook-f"></i></a>
+							<a href="#"><i class="fab fa-twitter"></i></a>
+							<a href="#"><i class="fab fa-instagram"></i></a>
+							<a href="#"><i class="fab fa-youtube"></i></a>
+						</div>
+					  </div>
+			</div>
+		</section>
+
+<!-- team section ends -->
+
+
+	   <!-- Review Section -->
+	<div class="mb-5">
+	   <h3 class="mb-3 text-center" style="color: #333; font-size: 32px; font-family: 'Dancing Script', cursive;">Why Brides Love Wishiz</h3>
+
+	   <div class="container">
+		<div class="row gx-5">
+			<div class="col-lg-4 col-md-6 review-section rev-img1">
+				<img src="img/review3.jpg" width="100px" alt="">
+				<p class="mt-3 review-name">Salman Ahmed</p>
+				<p class="text-muted">Bride</p>
+				<i class="fas fa-quote-right"></i>
+				<p class="review-para">Simply, your app is just amazing and helped me out to organise my wedding perfectly the way I always wanted.</p>
+			</div>
+			<div class="col-lg-4 col-md-6 text-center review-section review-top rev-img1">
+				<img src="img/review2.jpg" width="100px" alt="">
+				<p class="mt-3 review-name">Aiman Siddique</p>
+				<p class="text-muted">Bride</p>
+				<i class="fas fa-quote-right"></i>
+				<p class="review-para">Weddings are memories for a lifetime and Wishiz filled that bit more “life” in it. I planned my wedding through Wishiz website and their App.</p>
+			</div>
+			<div class="col-lg-4 col-md-6 text-center review-section review-top rev-img1">
+				<img src="img/review1.jpg" width="100px" alt="">
+				<p class="mt-3 review-name">Hassan Ahmed</p>
+				<p class="text-muted">Bride</p>
+				<i class="fas fa-quote-right"></i>
+				<p class="review-para">We loved the pre-wed shoot planned by Wishiz. Such royal location, gorgeous outfits, fabulous artists & photographers, really helped us to create beautiful memories for lifetime.</p>
+			</div>
+		</div>
+	   </div>
+	</div>
+       <!-- Review Section End -->
+
+		<!-- wedding packages -->
+		<h1 class="heading" style="font-family: 'Dancing Script', cursive;">Choose Yours</h1>
+		<h1 class="mini-heading">WEDDING PACKAGES</h1>
+		<hr class="line-none" style="margin-left: 100px; margin-right: 100px; color: #A08173;">
+		<!-- wedding packages end-->
+
+	
+    
+
+		<!-- pricing-features -->
+		<div class="background my-5">
+			<div class="container">
+			  <div class="panel pricing-table">
+		  
+				<div class="pricing-plan">
+				  <h2 class="pricing-header pt-3">BASIC PACKAGE</h2>
+				  <h5 class="pricing-header-span">$250<span>/Monthly</span></h5>
+				  <img src="img/price-planning.svg" alt="" class="pricing-img my-3 mb-4">
+				  <ul class="pricing-features">
+					<li class="pricing-features-item">Stylish makeup for bride.</li>
+					<li class="pricing-features-item">Top label arrengement</li>
+					<li class="pricing-features-item">Amazing meal & breakfast</li>
+					<li class="pricing-features-item">Manicure & Pedicure</li>
+					<li class="pricing-features-item">Full body Polish</li>
+				  </ul>
+				  <a href="#" style="padding: 14px 22px; border-radius: 2px;" class="btnn-appoinment mx-md-5" onclick="basic()"><span>CHOOSE PLAN</span></a>
+				</div>
+		  
+				<div class="pricing-plan">
+				  <h2 class="pricing-header pt-3">STANDARD PACKAGE</h2>
+				  <h5 class="pricing-header-span">$450<span>/Monthly</span></h5>
+				  <img src="img/price-planning.svg" alt="" class="pricing-img my-3 mb-4">
+				  <ul class="pricing-features">
+					<li class="pricing-features-item">Stylish makeup for bride.</li>
+					<li class="pricing-features-item">Top label arrengement</li>
+					<li class="pricing-features-item">Amazing meal & breakfast</li>
+					<li class="pricing-features-item">Manicure & Pedicure</li>
+					<li class="pricing-features-item">Complementary Wedding Dress</li>
+				  </ul>
+				  <a href="#" style="padding: 14px 22px; border-radius: 2px;" class="btnn-appoinment mx-md-5" onclick="basic()"><span>CHOOSE PLAN</span></a>
+				</div>
+		  
+				<div class="pricing-plan">
+				  <h2 class="pricing-header pt-3">LUXURY PACKAGE</h2>
+				  <h5 class="pricing-header-span">$650<span>/Monthly</span></h5>
+				  <img src="img/price-planning.svg" alt="" class="pricing-img my-3 mb-4">
+				  <ul class="pricing-features">
+					<li class="pricing-features-item">Stylish makeup for bride.</li>
+					<li class="pricing-features-item">Top label arrengement</li>
+					<li class="pricing-features-item">Amazing meal & breakfast</li>
+					<li class="pricing-features-item">Manicure & Pedicure</li>
+					<li class="pricing-features-item">Complementary Wedding Dress or Cake</li>
+				  </ul>
+				  <a href="#" style="padding: 14px 22px; border-radius: 2px;" class="btnn-appoinment mx-md-5" onclick="basic()"><span>CHOOSE PLAN</span></a>
+				</div>
+		  
+			  </div>
+			</div>
+		  </div>
+		  <!-- pricing-features -->
+
+		  <!-- Footer -->
+		  <footer>
+			<div class="footer">
+		
+				<img class="justify-content-center text-center m-auto py-3" width="250px" src="img/logo.png" alt="">
+				<div class="row">
+					<div class="col-12 footer-link">
+				<ul>
+					<li><a class="menu__link" href="index.html">Home</a></li>
+					<li><a class="menu__link" href="aboutus.html">About</a></li>
+					<li><a class="menu__link" href="firstpage.html">Category</a></li>
+					<li><a class="menu__link" href="shop.html">Shop</a></li>
+					<li><a class="menu__link" href="gallery.html">Gallery</a></li>
+					<li><a class="menu__link" href="contactus.html">Contact</a></li>
+				</ul>
+				</div>
+			</div>
+		
+			  <div class="row">
+				<div class="col-12">
+				<a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+				<a href="#"><i class="fa-brands fa-instagram"></i></a>
+				<a href="#"><i class="fa-brands fa-youtube"></i></a>
+				<a href="#"><i class="fa-brands fa-twitter"></i></a>
+			</div>
+			  </div>
+		
+			  <div class="row justify-content-center text-center">
+				© Copyright 2023 | Wishiz | All right reserved.
+			  </div>
+			</div>
+		  </footer>
+		  <!-- Footer End-->
+
+
+
+
+
+
+
+
+    <!-- Bottom to top button -->
+    <a href="#" class="to-top">
+        <i class="fa-solid fa-angle-up"></i>
+      </a>
+      <!-- Bottom to top button end -->
+
+
+
+    <!-- personal js link -->
+    <script src="Javascript/main.js"></script>
+    <!-- bootstrap js cdn link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+</body>
+</html>

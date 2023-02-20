@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Poppins:ital,wght@0,100;0,200;1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,800);
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.heading{
+	text-align: center;
+	color: #939580;
+	padding: 8px 0;
+	font-size: 48px;
+}
+
+.mini-heading{
+	text-align: center;
+	color: #000000;
+	font-family: 'Poppins', sans-serif !important;
+	font-style: italic;
+  font-size: 32px;
+  line-height: 1.2;
+  font-weight: bolder;
+	padding: 4px 0;
+}
+@media (max-width: 991px) {
+  .mini-heading{
+		font-size: 28px !important;
+	}
+}
+
+@media (max-width: 450px){
+  .mini-heading{
+		font-size: 20px !important;
+	}
+}
+
+.hole-cards{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.image {
+  position: relative;
+}
+
+.star-main{
+  position: absolute;
+  display: flex;
+  top: 60%;
+  bottom: 40%;
+  left: 20%;
+}
+
+.checked{
+  color: rgb(207, 135, 0);
+}
+
+#ppp{
+  color: blue;
+  font-size: 10px;
+}
+
+.star-text{
+  font-size: 20px;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+}
+
+.star span{
+  margin-top: 8px;
+}
+
+.main-parent:hover{
+  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.7);
+  opacity: 1;
+  background-color: black;
+}
+.main-parent{
+  height: 220px;
+  width: 300px;
+  opacity: 0;
+  cursor: pointer;
+  border-radius: 10px;
+
+}
+
+#card-img{
+  height: 220px;
+  width: 300px;
+  border-radius: 10px;
+  opacity: 0.7;
+}
+
+.icon-main{
+  position: absolute;
+  color: white;
+  display: flex;
+  font-size: 10px;
+  gap: 10px;
+  top: 40%;
+  bottom: 40%;
+  left: 12%;
+}
+
+.for-icon-text h3{
+	font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+
+.location h5{
+	font-family: 'Poppins', sans-serif;
+}
+.star-text{
+	font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+
+.main-parent:hover .hover-text{
+  opacity: 1;
+  transition: 0.5s ease-in-out;
+}
+
+.hover-text{
+  opacity: 0;
+}
