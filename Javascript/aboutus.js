@@ -1,4 +1,4 @@
-// Body Loader
+// Body Loaderr
 var preloader = document.getElementById('loader-wrapper');
 
 function onLoading(){
